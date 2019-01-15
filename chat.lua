@@ -10,7 +10,12 @@ local hits = {};
 
 local last_message = globals.TickCount();
 local spammer_enable, spammer_speed = false, 22;
-local messages = {};
+local messages = {
+    ["spam"] = {},
+    ["kill"] = {},
+    ["death"] = {},
+    ["onetap"] = {}
+};
 
 local kill_enable = false;
 local onetap_enable = false;
