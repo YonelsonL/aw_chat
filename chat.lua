@@ -121,6 +121,13 @@ function loadData()
     if (chat_data ~= nil and chat_data ~= "") then
         messages = parseStringifiedTable(chat_data);
     end
+
+    local types = {"spam", "kill", "death", "onetap"};
+    for i=1, #types do
+        if (messages[types[i]] == nil) then
+            messages[types[i]] = {};
+        end
+    end
 end
 
 function saveData()
